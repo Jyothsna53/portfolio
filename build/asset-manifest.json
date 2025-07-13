@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a53322f8.css",
+    "main.js": "/static/js/main.467eccb4.js",
+    "static/media/profile.jpg": "/static/media/profile.ec1f33c66f73f347029d.jpg",
+    "static/media/Jyothsna_Yettapu_Resume.pdf": "/static/media/Jyothsna_Yettapu_Resume.5c531b0a813f7987470c.pdf",
+    "index.html": "/index.html",
+    "main.a53322f8.css.map": "/static/css/main.a53322f8.css.map",
+    "main.467eccb4.js.map": "/static/js/main.467eccb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a53322f8.css",
+    "static/js/main.467eccb4.js"
+  ]
+}
