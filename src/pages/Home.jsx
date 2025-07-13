@@ -51,7 +51,7 @@ const Home = () => {
                 {/* Your profile photo */}
                 <img 
                   src={profilePhoto} 
-                  alt="Yettapu Jyothsna - Profile Photo" 
+                  alt="Yettapu Jyothsna" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
