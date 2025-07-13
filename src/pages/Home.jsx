@@ -9,17 +9,24 @@ const Home = () => {
 
   const handleResumeDownload = () => {
     try {
-      // Create a temporary link element to trigger download
-      const link = document.createElement('a');
-      link.href = resume;
-      link.download = 'Jyothsna_Yettapu_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Error downloading resume:', error);
-      // Fallback: open in new tab
+      // Method 1: Try to open in new tab first (most reliable)
       window.open(resume, '_blank');
+    } catch (error) {
+      console.error('Error opening resume:', error);
+      // Method 2: Fallback to download link
+      try {
+        const link = document.createElement('a');
+        link.href = resume;
+        link.download = 'Jyothsna_Yettapu_Resume.pdf';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (downloadError) {
+        console.error('Error downloading resume:', downloadError);
+        // Method 3: Final fallback - just open the URL
+        window.open(resume, '_blank', 'noopener,noreferrer');
+      }
     }
   };
 
@@ -85,7 +92,7 @@ const Home = () => {
                 className="flex items-center justify-center gap-2 px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
                 <Download className="w-5 h-5" />
-                Download Resume
+                View Resume
               </motion.button>
               <motion.a
                 href="https://github.com/Jyothsna53" // <-- Replace with your actual GitHub URL
