@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, Github, Linkedin, Code } from 'lucide-react';
 import profilePhoto from '../assets/profile.jpg';
-import resume from '../assets/Jyothsna Yettapu_Resume.pdf';
+import resume from '../assets/Jyothsna_Yettapu_Resume.pdf';
 
 const Home = () => {
   // Remove skillCategories and all related animation variants
