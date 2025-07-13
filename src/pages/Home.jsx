@@ -7,6 +7,22 @@ import resume from '../assets/Jyothsna Yettapu_Resume.pdf';
 const Home = () => {
   // Remove skillCategories and all related animation variants
 
+  const handleResumeDownload = () => {
+    try {
+      // Create a temporary link element to trigger download
+      const link = document.createElement('a');
+      link.href = resume;
+      link.download = 'Jyothsna_Yettapu_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: open in new tab
+      window.open(resume, '_blank');
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-padding pt-20">
       <div className="container-custom">
@@ -62,17 +78,15 @@ const Home = () => {
             I'm passionate about data and intelligent systems — learning to extract insights, build predictive models, and explore generative AI. I enjoy solving real-world problems and continuously growing my skills in analytics and AI.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 mb-12">
-              <motion.a
-                href={resume}
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={handleResumeDownload}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-2 px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
-              </motion.a>
+              </motion.button>
               <motion.a
                 href="https://github.com/Jyothsna53" // <-- Replace with your actual GitHub URL
                 target="_blank"
