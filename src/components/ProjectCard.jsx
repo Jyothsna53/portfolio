@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { Github, Eye } from 'lucide-react';
 
 const ProjectCard = ({ project }) => {
-  const { title, description, tech, liveUrl, githubUrl, image } = project;
+  const { title, description, tech, liveUrl, githubUrl } = project;
 
   return (
     <motion.div

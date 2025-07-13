@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin, Code } from 'lucide-react';
+import { Download, Github } from 'lucide-react';
 import profilePhoto from '../assets/profile.jpg';
 import resume from '../assets/Jyothsna_Yettapu_Resume.pdf';
 
@@ -51,7 +51,7 @@ const Home = () => {
                 {/* Your profile photo */}
                 <img 
                   src={profilePhoto} 
-                  alt="Profile Photo" 
+                  alt="Yettapu Jyothsna - Profile Photo" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
